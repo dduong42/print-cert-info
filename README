@@ -1,0 +1,66 @@
+Usage:
+
+$ print-cert-info hostname port
+
+
+Examples:
+
+$ ./print-cert-info github.com 443                           
+{'OCSP': ('http://ocsp.digicert.com',),
+ 'caIssuers': ('http://cacerts.digicert.com/DigiCertTLSHybridECCSHA3842020CA1-1.crt',),
+ 'crlDistributionPoints': ('http://crl3.digicert.com/DigiCertTLSHybridECCSHA3842020CA1-1.crl',
+                           'http://crl4.digicert.com/DigiCertTLSHybridECCSHA3842020CA1-1.crl'),
+ 'issuer': ((('countryName', 'US'),),
+            (('organizationName', 'DigiCert Inc'),),
+            (('commonName', 'DigiCert TLS Hybrid ECC SHA384 2020 CA1'),)),
+ 'notAfter': 'Mar 14 23:59:59 2024 GMT',
+ 'notBefore': 'Feb 14 00:00:00 2023 GMT',
+ 'serialNumber': '0CD0A8BEC632CFE645ECA0A9B084FB1C',
+ 'subject': ((('countryName', 'US'),),
+             (('stateOrProvinceName', 'California'),),
+             (('localityName', 'San Francisco'),),
+             (('organizationName', 'GitHub, Inc.'),),
+             (('commonName', 'github.com'),)),
+ 'subjectAltName': (('DNS', 'github.com'), ('DNS', 'www.github.com')),
+ 'version': 3}
+
+$ ./print-cert-info outlook.office365.com 993
+{'OCSP': ('http://ocspx.digicert.com',),
+ 'caIssuers': ('http://cacerts.digicert.com/DigiCertCloudServicesCA-1.crt',),
+ 'crlDistributionPoints': ('http://crl3.digicert.com/DigiCertCloudServicesCA-1-g1.crl',
+                           'http://crl4.digicert.com/DigiCertCloudServicesCA-1-g1.crl'),
+ 'issuer': ((('countryName', 'US'),),
+            (('organizationName', 'DigiCert Inc'),),
+            (('commonName', 'DigiCert Cloud Services CA-1'),)),
+ 'notAfter': 'May 30 23:59:59 2024 GMT',
+ 'notBefore': 'May 31 00:00:00 2023 GMT',
+ 'serialNumber': '0800949F735E2F5D4D16CE198166772C',
+ 'subject': ((('countryName', 'US'),),
+             (('stateOrProvinceName', 'Washington'),),
+             (('localityName', 'Redmond'),),
+             (('organizationName', 'Microsoft Corporation'),),
+             (('commonName', 'outlook.com'),)),
+ 'subjectAltName': (('DNS', '*.clo.footprintdns.com'),
+                    ('DNS', '*.hotmail.com'),
+                    ('DNS', '*.internal.outlook.com'),
+                    ('DNS', '*.live.com'),
+                    ('DNS', '*.nrb.footprintdns.com'),
+                    ('DNS', '*.office.com'),
+                    ('DNS', '*.office365.com'),
+                    ('DNS', '*.outlook.com'),
+                    ('DNS', '*.outlook.office365.com'),
+                    ('DNS', 'attachment.outlook.live.net'),
+                    ('DNS', 'attachment.outlook.office.net'),
+                    ('DNS', 'attachment.outlook.officeppe.net'),
+                    ('DNS', 'attachments.office.net'),
+                    ('DNS', 'attachments-sdf.office.net'),
+                    ('DNS', 'ccs.login.microsoftonline.com'),
+                    ('DNS', 'ccs-sdf.login.microsoftonline.com'),
+                    ('DNS', 'hotmail.com'),
+                    ('DNS', 'mail.services.live.com'),
+                    ('DNS', 'office365.com'),
+                    ('DNS', 'outlook.com'),
+                    ('DNS', 'outlook.office.com'),
+                    ('DNS', 'substrate.office.com'),
+                    ('DNS', 'substrate-sdf.office.com')),
+ 'version': 3}
